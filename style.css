@@ -1,0 +1,54 @@
+form{
+  width: 300px;
+}
+
+h4{
+  background-color: #FEE0C6
+
+}
+h1{
+  background-color: #FEE0C6;
+}
+#first{
+  text-align: left;
+}
+#final{
+  text-align: right;
+  border-bottom: 2px solid black;
+}
+
+form label{
+  display:block;
+  margin-bottom:10px;
+  background-color: #FEE0C6;
+}
+
+form input[type="textarea"] {
+  height:150px;
+  width: 300px;
+}
+
+#info-everyone{
+  position: absolute;
+  top:0px;
+  right:0px;
+}
+
+.person, .persondesc{
+  height: 150px;
+  width: 350px;
+  background-color: #FF7F50;
+  margin-right: 30px;
+  margin-top:10px;
+  padding: 20px;
+  position:relative;
+}
+
+
+.persondesc{
+  display:none;
+  position: absolute;
+  top:-10px;
+  right:-30px;
+  background-color: #FEE0C6;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Contact Cards</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function(){
+          $('form').submit(function(){
+            $('#contactinfo').append("<div class='person'id='counter'><h2>" 
+              + $('form').find('input[name="first-name"]').val()
+              +' '
+              + $('form').find('input[name="last-name"]').val()
+              + "</h2><div class='persondesc'><p>"
+              + $('form').find('input[name="description"]').val()
+              + "</p><p>[Click for Name]</p></div> <p>[Click for Description]</p></div>"
+            )
+            return false;
+          });
+          $(document).on('click', '.person', function(){
+            $(this).children('div').toggle()
+              });
+          });
+      </script>
+      <meta charset="utf-8">
+   </head>
+
+   <body>
+      <form>
+        <h1 id="first">Share Your </h1>
+        <h1 id="final">Contact Info</h1>
+        <label><h4>First Name: </h4><input type="text" name="first-name" value="First Name"></label>
+        <label></h4>Last Name: </h4><input type="text" name="last-name" value="Last Name"></label>
+        <label><p><h4>Description: </h4></p>
+        <input type="textarea" name="description" value="Enter Description"></label>
+        <label><input type="submit" value="Add User"></label>
+      </form>
+      <div id="contactinfo">
+      </div>
+   </body>
+</html>
